@@ -1,0 +1,38 @@
+---
+title: Look Portrait - Home
+---
+
+<div class="main-container">
+    <div class="main wrapper clearfix">
+            <div class="galleries-link-container">
+                <a href="galleries/seniors.html">
+                    <%= image_tag 'home-girl-black-white.png', :alt=>'Senior picture of girl' %>
+                </a>
+                <%= link_to 'Senior Pics - Hillary Roe', 'galleries/seniors.html', :class=>'gallery-link' %>
+            </div>
+            <div class="galleries-link-container">
+                <% link_to 'galleries/seniors.html' do %>
+                	<%= image_tag 'home-golf.png', :alt=>'Senior picture of golfer' %>
+                <% end %>
+                <%= link_to 'Senior Pics - Jason Dunn', 'galleries/seniors.html', :class=>'gallery-link' %>
+            </div>
+            <div class="galleries-link-container">
+                <a href="galleries/seniors.html">
+                	<%= image_tag 'golf.jpeg', :alt=>'Senior picture of golfer' %>
+                </a>
+                <%= link_to 'Senior Pics - Jason Dunn', 'galleries/seniors.html', :class=>'gallery-link' %>
+            </div>
+            <div class="galleries-link-container">
+                <a href="galleries/seniors.html">
+                	<%= image_tag 'hockey.jpeg', :alt=> 'Senior picture of hockey player' %>
+                </a>
+                <%= link_to 'Senior Pics - Jason Dunn', 'galleries/seniors.html', :class=>'gallery-link' %>
+            </div>
+            <div class="galleries-link-container">
+                <a href="galleries/seniors.html">
+                	<%= image_tag 'girl4.jpeg', :alt=> 'Senior picture of girl' %>
+                </a>
+                <%= link_to 'Senior Pics - Jason Dunn', 'galleries/seniors.html', :class=>'gallery-link' %>
+            </div>
+    </div> <!-- #main -->
+</div> <!-- #main-container -->
