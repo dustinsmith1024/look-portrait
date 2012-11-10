@@ -22,7 +22,9 @@
     <![endif]-->
     <div class="brand wrapper">
       <h1 class="title">
-          <%= image_tag 'look-arrow-logo.png', :class=>'logo', :alt=>'Look Portrait - Dan Brouillette Studio' %>
+        <% link_to '/' do %>
+          <%= image_tag 'look-logo.png', :class=>'logo', :alt=>'Look Portrait - Dan Brouillette Studio' %>
+          <% end %>
       </h1>
     </div>
     <div class="header-container">
@@ -42,8 +44,8 @@
 
     <div class="footer-container wrapper">
       <footer class="">
-          <h3>Dan Brouillette Studios</h3>
-          <p>Sioux City, IA</p>
+          <h3>Look Portrait</h3>
+          <p>Omaha, NE</p>
       </footer>
     </div>
 

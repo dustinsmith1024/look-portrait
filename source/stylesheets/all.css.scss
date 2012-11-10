@@ -2,7 +2,10 @@
    HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
    ========================================================================== */
 @import "bourbon/bourbon";
+$visual-grid: true;
+/*$visual-grid-index: front;*/
 @import "neat/neat";
+
 
 html,
 button,
@@ -57,31 +60,11 @@ textarea {
     padding: 0.2em 0;
 }
 
-
-/* ===== Initializr Styles ==================================================
-   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
-   ========================================================================== */
-
 body {
-    font: 16px/26px Century Gothic, sans-serif;
+    font: 1em Century Gothic, sans-serif;
     color: #333;
+    background-color: #FBFBFB;
 
-}
-
-.wrapper {
-    width: 90%;
-    margin: 0 5%;
-}
-
-/* ===================
-    ALL: Theming
-   =================== */
-
-body {
-    /*background-color: #FBFBFC;*/
-}
-
-.header-container {
 }
 
 .footer-container {
@@ -121,7 +104,7 @@ nav ul {
 nav a {
     display: block;
     margin-bottom: 10px;
-    padding: 15px 0;
+    padding: 0 0 10px 0;
 
     text-align: center;
     text-decoration: none;
@@ -151,7 +134,7 @@ a {
    ============== */
 
 .main {
-    padding: 30px 0;
+    padding: 10px 0;
 }
 
 .main article h1 {
@@ -160,7 +143,6 @@ a {
 
 .main aside {
     color: white;
-    padding: 0px 5% 10px;
 }
 
 .footer-container {
@@ -168,7 +150,7 @@ a {
     text-align: center;
 }
 .footer-container footer {
-    color: #7e7e7e;
+    color: #333;
     padding: 20px 0;
     font-size: .8em;
 }
@@ -181,135 +163,113 @@ a {
     padding-top: 20px;
 }
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
 .galleries-link-container {
-    height: 250px;
+    text-align: center;
+    margin-bottom: 10px;
 }
-.galleries-link-container a {
-    max-height: 210px;
-    overflow: hidden;
+.gallery-image-link {
     display: block;
-}   
-.galleries-link-container img {
-    width: auto;
-    padding: 10px;
-}
-.gallery-link {
-    text-transform: uppercase;
-    padding-left: 10px;
-    font-size: .8em;
-}
-
-
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-
-@media only screen and (min-width: 480px) {
-
-/* ====================
-    INTERMEDIATE: Menu
-   ==================== */
-
-    nav a {
-        float: left;
-        width: 25%;
-        margin-bottom: 0;
-        font-size: .8em;
-    }
-
-    nav li:first-child a {
-        margin-left: 0;
-    }
-
-    nav li:last-child a {
-        margin-right: 0;
-    }
-
-/* ========================
-    INTERMEDIATE: IE Fixes
-   ======================== */
-
-    nav ul li {
-        display: inline;
-    }
-
-    .oldie nav a {
-        margin: 0 0.7%;
-    }
-
-    .galleries-link-container {
-        float: left;
-        width: 50%;
-        height: 250px
-    }
-    .galleries-link-container a {
-        max-height: 210px;
-        overflow: hidden;
-        display: block;
-    }   
-    .galleries-link-container img {
-        height: 100%;
-        padding: 10px;
+    img {
+        width: 100%;
     }
 }
 
-
-.about-aside {
-      @include span-columns(6);
-}
-.about-article {
-      @include span-columns(6);
-
-}
-
-.contact-aside {
-      @include span-columns(6);
-      float: right;
-}
-.contact-article {
-      @include span-columns(6);
-
-}
-
-@media only screen and (min-width: 768px) {
-
-/* ============
-    WIDE: Menu
-   ============ */
-
-    .title {
-
+    .gallery-link {
+        padding-top: 10px;
+        display: inline-block;
     }
 
+@media only screen and (min-width: 347px) {
     nav {
-        /*float: right;*/
+        @include outer-container;
+        li {
+            @include span-columns(3);
+        }
+        a {
+            padding: 0;
+        }
+    }
+    nav a, .gallery-link {
+        font-size: 0.9em;
+    }
+    .galleries-link-container {
+        text-align: left;
+        margin-bottom: 0px;
+    }
+}
+
+@media only screen and (min-width: 347px) and (max-width: 692px) {
+    .main {
+        @include outer-container;
+        .galleries-link-container {
+            @include span-columns(6);
+            @include nth-omega(2n);
+            height: 240px;  /* Could be played with I think 250 for the */
+            overflow-y: hidden;
+            .gallery-image-link {
+                @include fill-parent;
+                display: block;
+                height: 200px;
+                overflow-x: hidden;
+                img {
+                    height: 100%;
+                    min-width: 100%; /* MIGHT NOT NEED THESE ONCE THE IMAGES ARE GOOD */
+                }
+            }
+        }
     }
 
-/* ============
-    WIDE: Main
-   ============ */
+}
+
+.about-aside, .contact-aside {
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media only screen and (min-width: 693px) {
     .main aside img {
         max-width: 100%;
     }
-    .galleries-link-container {
-        float: left;
-        width: 33%;
-        height: 250px
+
+    .main {
+        @include outer-container;
+        .galleries-link-container {
+            @include span-columns(4);
+            @include nth-omega(3n);
+            height: 240px;  /* Could be played with I think 250 for the */
+            overflow-y: hidden;
+            .gallery-image-link {
+                @include fill-parent;
+                height: 200px;
+                display: block;
+                overflow-x: hidden;
+                img {
+                    height: 100%;
+                    min-width: 100%;
+                }
+            }
+        }
     }
-    .galleries-link-container a {
-        max-height: 210px;
-        overflow: hidden;
-        display: block;
-    }   
-    .galleries-link-container img {
-        height: 100%;
-        padding: 10px;
+
+    .main {
+        @include outer-container;
+        .about-aside {
+              @include span-columns(6);
+        }
+
+        .about-article {
+              @include span-columns(6);
+
+        }
+
+        .contact-aside {
+              @include span-columns(6);
+              float: right;
+        }
+
+        .contact-article {
+              @include span-columns(6);
+        }
     }
 }
 
@@ -319,7 +279,7 @@ a {
     Maximal Width
    =============== */
 
-    .wrapper {
+    .wrapper2 {
         width: 1026px; /* 1140px - 10% for margins */
         margin: 0 auto;
     }
