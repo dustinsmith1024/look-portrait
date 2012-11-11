@@ -91,11 +91,6 @@ p {
 /* ==============
     MOBILE: Menu
    ============== */
-
-.brand {
-
-}
-
 nav ul {
     margin: 0;
     padding: 0;
@@ -137,15 +132,8 @@ a {
     padding: 10px 0;
 }
 
-.main article h1 {
-    font-size: 2em;
-}
-
-.main aside {
-    color: white;
-}
-
 .footer-container {
+    @include outer-container;
     margin: 0px auto;
     text-align: center;
 }
@@ -174,10 +162,24 @@ a {
     }
 }
 
-    .gallery-link {
-        padding-top: 10px;
-        display: inline-block;
+.gallery-link {
+    padding-top: 10px;
+    display: inline-block;
+}
+
+.active-picture-container {
+    text-align: center;
+}
+
+.pictures-list {
+    margin: 5px 0;
+    padding: 0;
+    li {
+    display: inline;
+    list-style-type: none;
+    padding: 0 10px;
     }
+}
 
 @media only screen and (min-width: 347px) {
     nav {
@@ -196,32 +198,33 @@ a {
         text-align: left;
         margin-bottom: 0px;
     }
+    .main {
+        @include outer-container;
+    }
+
 }
 
 @media only screen and (min-width: 347px) and (max-width: 692px) {
-    .main {
-        @include outer-container;
-        .galleries-link-container {
-            @include span-columns(6);
-            @include nth-omega(2n);
-            height: 240px;  /* Could be played with I think 250 for the */
-            overflow-y: hidden;
-            .gallery-image-link {
-                @include fill-parent;
-                display: block;
-                height: 200px;
-                overflow-x: hidden;
-                img {
-                    height: 100%;
-                    min-width: 100%; /* MIGHT NOT NEED THESE ONCE THE IMAGES ARE GOOD */
-                }
+    .galleries-link-container {
+        @include span-columns(6);
+        @include nth-omega(2n);
+        height: 240px;  /* Could be played with I think 250 for the */
+        overflow-y: hidden;
+        .gallery-image-link {
+            @include fill-parent;
+            display: block;
+            height: 200px;
+            overflow-x: hidden;
+            img {
+                height: 100%;
+                min-width: 100%; /* MIGHT NOT NEED THESE ONCE THE IMAGES ARE GOOD */
             }
         }
     }
 
 }
 
-.about-aside, .contact-aside {
+.about-aside, .contact-aside, .gallery-aside {
     margin: 0 auto;
     text-align: center;
 }
@@ -251,25 +254,31 @@ a {
         }
     }
 
-    .main {
-        @include outer-container;
-        .about-aside {
-              @include span-columns(6);
-        }
+    .gallery-aside {
+          @include span-columns(3);
+    }
 
-        .about-article {
-              @include span-columns(6);
+    .gallery-section {
+          @include span-columns(9);
 
-        }
+    }
 
-        .contact-aside {
-              @include span-columns(6);
-              float: right;
-        }
+    .about-aside {
+          @include span-columns(6);
+    }
 
-        .contact-article {
-              @include span-columns(6);
-        }
+    .about-article {
+          @include span-columns(6);
+
+    }
+
+    .contact-aside {
+          @include span-columns(6);
+          float: right;
+    }
+
+    .contact-article {
+          @include span-columns(6);
     }
 }
 

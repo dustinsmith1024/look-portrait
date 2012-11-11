@@ -1,0 +1,17 @@
+<div class="main-container">
+    <div class="main wrapper clearfix">
+        <aside class='gallery-aside'>
+            <p>Jason's senior pictures from 2012. He wanted some golf pictures and some other random shots</p>
+        </aside>
+        <section class="gallery-section">
+            <div id="active-picture" class="active-picture-container">
+                <%= image_tag 'home-golf.png', :alt=>'Dan Brouillette', :class=>'pictures' %>
+            </div>
+            <ul id="pictures-list" class="pictures-list">
+                <li><%= link_to "1", "/images/galleries/jason/golf.jpeg" %></li>
+                <li><%= link_to "2", "/images/galleries/jason/hockey.jpeg" %></li>
+                <li><%= link_to "3", "/images/galleries/jason/boy.jpeg" %></li>
+            </ul>
+        </article>
+    </div> <!-- #main -->
+</div> <!-- #main-container -->
