@@ -1,5 +1,11 @@
 //= require_tree .
 $(function(){
+	if (Modernizr.inlinesvg) {
+        // Swap in SVG's for better zooming and pixelness on retina displays
+        $('#logo').attr('src', $('#logo').attr('src').replace('png', 'svg'));
+        $('#footer-logo').attr('src', $('#footer-logo').attr('src').replace('png', 'svg'));
+    }
+
 	$(document).on("click", "#pictures-list a", function(e){
 		var $this = $(this),
 			$list = $("#pictures-list");

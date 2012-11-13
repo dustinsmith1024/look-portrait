@@ -5,15 +5,15 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
-    
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="description" content="Look Portrait, Omaha, Senior Pictures, Senior Pics, High School Senior Pictures, Photography">
     <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Look Portrait, Omaha, Senior Pictures, Senior Pics, High School Senior Pictures, Photography">
     <!-- Use title if it's in the page YAML frontmatter -->
     <title><%= data.page.title || "Look Portrait" %></title>
-    
-    <%= stylesheet_link_tag "normalize", "all" %>
+    <%= javascript_include_tag  "all" %>
+    <!--[if lte IE 8]><%= stylesheet_link_tag "normalize", "ie" %><![endif]-->
+    <!--[if !IE]>--><%= stylesheet_link_tag "normalize", "all" %><!--<![endif]-->
   </head>
   
   <body class="<%= page_classes %>">
@@ -24,7 +24,7 @@
         <div class="brand">
             <h1 class="title">
                 <% link_to '/' do %>
-                    <%= image_tag 'look-logo.svg', :class=>'logo', :alt=>'Look Portrait' %>
+                    <%= image_tag 'look-logo.png', :id=>'logo', :class=>'logo', :alt=>'Look Portrait' %>
                 <% end %>
             </h1>
         </div>
@@ -44,18 +44,11 @@
 
     <footer class="wrapper">
         <% link_to '/' do %>
-          <%= image_tag 'look-logo.svg', :class=>'footer-logo', :alt=>'Look Portrait' %>
+          <%= image_tag 'look-logo.png', :id=>'footer-logo', :class=>'footer-logo', :alt=>'Look Portrait' %>
         <% end %>
         <p>Look Portrait | Omaha, NE | 712-420-1234</p>
         <p><%= mail_to 'dan@lookportrait.com' %></p>
     </footer>
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>
-
-    <%= javascript_include_tag  "all" %>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
 
     <script>
         var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];

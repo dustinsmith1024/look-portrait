@@ -1,0 +1,18 @@
+/* medium only */
+
+    .galleries-link-container {
+        @include span-columns(6);
+        @include nth-omega(2n);
+        height: 240px;  /* Could be played with I think 250 for the */
+        overflow-y: hidden;
+        .gallery-image-link {
+            @include fill-parent;
+            display: block;
+            height: 200px;
+            overflow-x: hidden;
+            img {
+                height: 100%;
+                min-width: 100%; /* MIGHT NOT NEED THESE ONCE THE IMAGES ARE GOOD */
+            }
+        }
+    }

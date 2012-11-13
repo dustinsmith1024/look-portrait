@@ -1,0 +1,9 @@
+/* IE only 
+
+this loads all the css without the media queries
+
+*/
+@import 'basic';
+@import 'small-and-up';
+//@import 'medium-only';
+@import 'large-and-up';

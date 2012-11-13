@@ -1,0 +1,53 @@
+/* large and up */
+
+
+    .main aside img {
+        max-width: 100%;
+    }
+
+    .main {
+        @include outer-container;
+        .galleries-link-container {
+            @include span-columns(4);
+            @include nth-omega(3n);
+            height: 240px;  /* Could be played with I think 250 for the */
+            overflow-y: hidden;
+            .gallery-image-link {
+                @include fill-parent;
+                height: 200px;
+                display: block;
+                overflow-x: hidden;
+                img {
+                    height: 100%;
+                    min-width: 100%;
+                }
+            }
+        }
+    }
+
+    .gallery-aside {
+          @include span-columns(3);
+    }
+
+    .gallery-section {
+          @include span-columns(9);
+
+    }
+
+    .about-aside {
+          @include span-columns(6);
+    }
+
+    .about-article {
+          @include span-columns(6);
+
+    }
+
+    .resources-aside {
+          @include span-columns(6);
+          float: right;
+    }
+
+    .resources-article {
+          @include span-columns(6);
+    }
