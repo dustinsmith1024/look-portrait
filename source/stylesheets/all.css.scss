@@ -30,64 +30,27 @@ body {
     text-shadow: none;
 }
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
 img {
     vertical-align: middle;
 }
 
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-textarea {
-    resize: vertical;
-}
-
 .chromeframe {
-    margin: 0.2em 0;
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
+    margin: 0.2em 0;
 }
 
 body {
-    font: 1em Century Gothic, sans-serif;
-    color: #333;
     background-color: #FBFBFB;
-
-}
-
-.footer-container {
-    border-top: 1px solid #ccc;
-}
-
-.main {
-    border-top: 1px solid #ccc;
-}
-
-.brand {
-    text-align: center;
-}
-.title {
     color: #333;
-}
-.logo {
-    width: 154px;
+    font: 1em Century Gothic, sans-serif;
 }
 
 p {
-    font-size: 14px;
+    font-size: .9em;
 }
+
 /* ==============
     MOBILE: Menu
    ============== */
@@ -100,22 +63,19 @@ nav a {
     display: block;
     margin-bottom: 10px;
     padding: 0 0 10px 0;
-
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
 }
 
 a {
-    /*color: #7e7e7e;*/
-    color: #333;
+    color: #777;
 }
 
+nav a.active,
 nav a:hover,
-a:hover,
-a.active {
-    /*color: #c9232b;*/
-    color: #000;
+a:hover {
+    color: #333;
 }
 
 nav a:hover,
@@ -127,27 +87,42 @@ a {
 /* ==============
     MOBILE: Main
    ============== */
-
-.main {
-    padding: 10px 0;
-}
-
-.footer-container {
+footer {
     @include outer-container;
     margin: 0px auto;
     text-align: center;
 }
-.footer-container footer {
-    color: #333;
-    padding: 20px 0;
-    font-size: .8em;
+
+article h2 {
+    margin-top: 0;
 }
 
-/* ===============
-    ALL: IE Fixes
-   =============== */
+.main, footer {
+    border-top: 1px solid #eee;
+}
 
-.ie7 .title {
+.brand {
+    text-align: center;
+}
+
+.title {
+    color: #333;
+}
+
+.logo {
+    width: 150px;
+}
+
+.main {
+    padding: 15px 0;
+}
+
+.footer-logo {
+    width: 80px;
+    margin-top: 10px;
+}
+
+.ie7 .title { /* Not sure if this is needed */
     padding-top: 20px;
 }
 
@@ -179,6 +154,50 @@ a {
     list-style-type: none;
     padding: 0 10px;
     }
+}
+
+.gallery-image-link {
+    position: relative;
+}
+
+.gallery-link-logo {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: #000 url('/images/look-logo-no-bg.svg') no-repeat center center;
+    background-color: #333;
+    height: 100%;
+    opacity: 0;
+    @include transition (opacity .3s ease);
+}
+
+/*
+.main .galleries-link-container .gallery-image-link img.logo-hover {
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 33%;
+    z-index: -1;
+    width: 16.5%;
+    height: auto;
+    min-width: inherit;
+}
+*/
+
+.gallery-image-link:hover {
+    background-color: #fff;
+    .gallery-link-logo, .logo-hover {
+        display: block;
+        opacity: .75;
+        @include transition (opacity .3s ease);
+    }
+}
+
+.about-aside,
+.resources-aside,
+.gallery-aside {
+    margin: 0 auto;
+    text-align: center;
 }
 
 @media only screen and (min-width: 347px) {
@@ -224,11 +243,6 @@ a {
 
 }
 
-.about-aside, .contact-aside, .gallery-aside {
-    margin: 0 auto;
-    text-align: center;
-}
-
 @media only screen and (min-width: 693px) {
     .main aside img {
         max-width: 100%;
@@ -272,25 +286,13 @@ a {
 
     }
 
-    .contact-aside {
+    .resources-aside {
           @include span-columns(6);
           float: right;
     }
 
-    .contact-article {
+    .resources-article {
           @include span-columns(6);
-    }
-}
-
-@media only screen and (min-width: 1140px) {
-
-/* ===============
-    Maximal Width
-   =============== */
-
-    .wrapper2 {
-        width: 1026px; /* 1140px - 10% for margins */
-        margin: 0 auto;
     }
 }
 

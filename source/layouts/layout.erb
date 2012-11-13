@@ -20,34 +20,35 @@
     <!--[if lt IE 7]>
         <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
     <![endif]-->
-    <div class="brand wrapper">
-      <h1 class="title">
-        <% link_to '/' do %>
-          <%= image_tag 'look-logo.png', :class=>'logo', :alt=>'Look Portrait - Dan Brouillette Studio' %>
-          <% end %>
-      </h1>
-    </div>
-    <div class="header-container">
-      <header class="wrapper clearfix">
-          <nav>
-              <ul>
-                  <li><a class="active" href="index.html">Galleries</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                  <li><a href="http://danbrouillette.typepad.com">Blog</a></li>
-              </ul>
-          </nav>
-        </header>
-    </div>
-    
-    <%= yield %>
+    <header>
+        <div class="brand">
+            <h1 class="title">
+                <% link_to '/' do %>
+                    <%= image_tag 'look-logo.svg', :class=>'logo', :alt=>'Look Portrait' %>
+                <% end %>
+            </h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a <% if data.page.title == 'Look Portrait - Galleries' %>class="active"<% end %> href="index.html">Galleries</a></li>
+                <li><a <% if data.page.title == 'Look Portrait - About' %>class="active"<% end %> href="about.html">About</a></li>
+                <li><a <% if data.page.title == 'Look Portrait - Resources' %>class="active"<% end %> href="resources.html">Resources</a></li>
+                <li><a href="http://danbrouillette.typepad.com" target="_blank">Blog</a></li>
+            </ul>
+      </nav>
+    </header>
 
-    <div class="footer-container wrapper">
-      <footer class="">
-          <h3>Look Portrait</h3>
-          <p>Omaha, NE</p>
-      </footer>
+    <div class="main-container">
+      <%= yield %>
     </div>
+
+    <footer class="wrapper">
+        <% link_to '/' do %>
+          <%= image_tag 'look-logo.svg', :class=>'footer-logo', :alt=>'Look Portrait' %>
+        <% end %>
+        <p>Look Portrait | Omaha, NE | 712-420-1234</p>
+        <p><%= mail_to 'dan@lookportrait.com' %></p>
+    </footer>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.2.min.js"><\/script>')</script>

@@ -1,13 +1,25 @@
-<div class="main-container">
-    <div class="main wrapper clearfix">
-        <aside class='about-aside'>
-            <%= image_tag 'db-baby-photo.png', :alt=>'Dan Brouillette', :class=>'about-image' %>
-        </aside>
-        <article class="about-article">
-            <section>
-                <h1>About</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
-            </section>
-        </article>
-    </div> <!-- #main -->
-</div> <!-- #main-container -->
+---
+title: Look Portrait - About
+---
+<div class="main">
+    <aside class='about-aside'>
+        <%= image_tag 'db-baby-photo.png', :alt=>'Dan Brouillette', :class=>'about-image' %>
+    </aside>
+    <article class="about-article">
+        <section>
+            <h2>About</h2>
+            <dl>
+                <dt>Email</dt>
+                <dd><%= mail_to 'dan@danbrouillette.com' %></dd>
+                <dt>Twitter</dt>
+                <dd><%= link_to '@DanBrouillette', 'https://twitter.com/DanBrouillette' %>
+                <dt>Phone</dt>
+                <dd>712-123-4567</dd>
+                <dt>Address</dt>
+                <dd>1234 Dodge St.</dd>
+                <dd>Omaha, NE 68102</dd>
+            </dl>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+        </section>
+    </article>
+</div> <!-- #main -->
