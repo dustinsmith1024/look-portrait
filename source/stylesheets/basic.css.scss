@@ -167,7 +167,7 @@ article h2 {
     background-color: #333;
     background-size: 60%;
     height: 100%;
-    /*@include opacity: 0;*/
+    opacity: 0;
 	filter: alpha(opacity= 0 * 100 );
     zoom: 1;
     @include transition (opacity .3s ease);
@@ -175,7 +175,9 @@ article h2 {
 
 .no-svg {
     .gallery-link-logo {
-        background: none url('/images/look-arrow-logo-2-white-175x40.png') no-repeat center center;
+    	width: 175px;
+    	height: 40px;
+        background: #000 url('/images/look-arrow-logo-2-white-175x40.png') no-repeat center center;
     }
 }
 
