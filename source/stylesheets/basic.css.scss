@@ -117,8 +117,8 @@ article h2 {
 }
 
 .footer-logo {
-    width: 80px;
-    margin-top: 10px;
+    width: 120px;
+    margin-top: 15px;
 }
 
 .ie7 .title { /* Not sure if this is needed */
@@ -149,9 +149,9 @@ article h2 {
     margin: 5px 0;
     padding: 0;
     li {
-    display: inline;
-    list-style-type: none;
-    padding: 0 10px;
+	    display: inline;
+	    list-style-type: none;
+	    padding: 0 10px;
     }
 }
 
@@ -160,16 +160,19 @@ article h2 {
 }
 
 .gallery-link-logo {
-    position: absolute;
-    top: 0;
-    width: 100%;
     background: #000 url('/images/look-arrow-logo-2-white.svg') no-repeat center center;
     background-color: #333;
     background-size: 60%;
+    
+    position: absolute;
+    top: 0;
+    
     height: 100%;
+    width: 100%;
+
     opacity: 0;
 	filter: alpha(opacity= 0 * 100 );
-    zoom: 1;
+    zoom: 1; /* needed for opacity in IE */
     @include transition (opacity .3s ease);
 }
 
@@ -197,7 +200,7 @@ article h2 {
     .gallery-link-logo, .logo-hover {
         display: block;
         opacity: 0.75;
-        filter: alpha(opacity= 0.65 * 100 );
+        filter: alpha(opacity= 0.75 * 100 );
         @include transition (opacity .3s ease);
     }
 }
