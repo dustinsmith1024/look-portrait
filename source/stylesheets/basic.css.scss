@@ -168,7 +168,7 @@ article h2 {
     background-size: 60%;
     height: 100%;
     opacity: 0;
-    filter: unquote("alpha(opacity=0)";
+    filter: unquote("alpha(opacity=0)");
     zoom: 1;
     @include transition (opacity .3s ease);
 }
@@ -197,7 +197,7 @@ article h2 {
     .gallery-link-logo, .logo-hover {
         display: block;
         opacity: 0.75;
-		filter: unquote("alpha(opacity=0.75)";
+		filter: unquote("alpha(opacity=0.75)");
         @include transition (opacity .3s ease);
     }
 }
