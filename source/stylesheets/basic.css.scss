@@ -173,6 +173,7 @@ article h2 {
 
 .no-svg {
     .gallery-link-logo {
+    	display: none; //Just dont do the fade in/fade out
         background: none url('/images/look-arrow-logo-2-white-175x40.png') no-repeat center center;
     }
 }
