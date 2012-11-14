@@ -168,7 +168,8 @@ article h2 {
     background-size: 60%;
     height: 100%;
     opacity: 0;
-    filter: alpha(opacity = 0);
+    filter: "alpha(opacity=0)";
+    zoom: 1;
     @include transition (opacity .3s ease);
 }
 
@@ -195,8 +196,8 @@ article h2 {
     background-color: #fff;
     .gallery-link-logo, .logo-hover {
         display: block;
-        opacity: .75;
-        filter: alpha(opacity = .75);
+        opacity: 0.75;
+        filter: "alpha(opacity = 0.75)";
         @include transition (opacity .3s ease);
     }
 }
