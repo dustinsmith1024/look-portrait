@@ -159,16 +159,23 @@ article h2 {
     position: relative;
 }
 
+@mixin opacity ( $value: 0.5 ) {
+  opacity: $value;
+  -ms-filter: “progid:DXImageTransform.Microsoft.Alpha(Opacity=” $value * 100 “)”;
+  filter: alpha(opacity= $value * 100 );
+  zoom: 1;
+}
+
 .gallery-link-logo {
     position: absolute;
     top: 0;
     width: 100%;
-    background:  url('/images/look-arrow-logo-2-white.svg') no-repeat center center;
+    background: #000 url('/images/look-arrow-logo-2-white.svg') no-repeat center center;
     background-color: #333;
     background-size: 60%;
     height: 100%;
-    opacity: 0;
-    filter: unquote("alpha(opacity=0)");
+    /*@include opacity: 0;*/
+	filter: alpha(opacity= 0 * 100 );
     zoom: 1;
     @include transition (opacity .3s ease);
 }
@@ -197,7 +204,7 @@ article h2 {
     .gallery-link-logo, .logo-hover {
         display: block;
         opacity: 0.75;
-		filter: unquote("alpha(opacity=0.75)");
+        filter: alpha(opacity= 0.75 * 100 );
         @include transition (opacity .3s ease);
     }
 }
