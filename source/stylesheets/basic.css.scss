@@ -168,12 +168,12 @@ article h2 {
     background-size: 60%;
     height: 100%;
     opacity: 0;
+    filter: alpha(opacity = 0);
     @include transition (opacity .3s ease);
 }
 
 .no-svg {
     .gallery-link-logo {
-    	display: none; //Just dont do the fade in/fade out
         background: none url('/images/look-arrow-logo-2-white-175x40.png') no-repeat center center;
     }
 }
@@ -196,6 +196,7 @@ article h2 {
     .gallery-link-logo, .logo-hover {
         display: block;
         opacity: .75;
+        filter: alpha(opacity = .75);
         @include transition (opacity .3s ease);
     }
 }
