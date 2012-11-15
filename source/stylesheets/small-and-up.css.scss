@@ -1,21 +1,21 @@
 /* small and up */
 
-    nav {
-        @include outer-container;
-        li {
-            @include span-columns(3);
-        }
-        a {
-            padding: 0;
-        }
+nav {
+    @include outer-container;
+    li {
+        @include span-columns(3);
     }
-    nav a, .gallery-link {
-        font-size: 0.9em;
+    a {
+        padding: 0;
     }
-    .galleries-link-container {
-        text-align: left;
-        margin-bottom: 0px;
-    }
-    .main {
-        @include outer-container;
-    }
+}
+nav a, .gallery-link {
+    font-size: 0.9em;
+}
+.galleries-link-container {
+    text-align: left;
+    margin-bottom: 0;
+}
+.main {
+    @include outer-container;
+}
