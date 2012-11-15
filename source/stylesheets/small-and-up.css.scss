@@ -1,4 +1,7 @@
 /* small and up */
+.main {
+    @include outer-container;
+}
 
 nav {
     @include outer-container;
@@ -9,13 +12,12 @@ nav {
         padding: 0;
     }
 }
+
 nav a, .gallery-link {
     font-size: 0.9em;
 }
+
 .galleries-link-container {
-    text-align: left;
     margin-bottom: 0;
-}
-.main {
-    @include outer-container;
+    text-align: left;
 }

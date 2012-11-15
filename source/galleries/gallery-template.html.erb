@@ -1,0 +1,27 @@
+---
+title: Look Portrait - Template
+---
+<div class="main">
+    <aside class='gallery-aside'>
+        <p class="top">Template text, just go ahead and change this up. If you want another paragraph just make another 'P' tag.  Images in these galleries have a maximum height of 600 pixels. The maximum width that will show on the screen is 780. They will resize to fit the area though. I stole images from your site and they looked pretty good. </p>
+    </aside>
+    <article class="gallery-section">
+        <div id="active-picture" class="active-picture-container">
+            <%= image_tag '/images/galleries/some-gallery/some-image.jpg', :alt=>'Sample image for template gallery', :class=>'pictures' %>
+        </div>
+        <ul id="pictures-list" class="pictures-list">
+            <!-- #1 should be a new images not the same as the one above. Make number 10 match the image you put at the top. You can delete this comment from a real page, it won't show up though if you forget. !-->
+            <li><%= link_to "1", "/images/galleries/some-gallery/some-image1.jpg" %></li>
+            <li><%= link_to "2", "/images/galleries/some-gallery/some-image2.jpg" %></li>
+            <li><%= link_to "3", "/images/galleries/some-gallery/some-image3.jpg" %></li>
+            <li><%= link_to "4", "/images/galleries/some-gallery/some-image4.jpg" %></li>
+            <li><%= link_to "5", "/images/galleries/some-gallery/some-image5.jpg" %></li>
+            <li><%= link_to "6", "/images/galleries/some-gallery/some-image6.jpg" %></li>
+            <li><%= link_to "7", "/images/galleries/some-gallery/some-image7.jpg" %></li>
+            <li><%= link_to "8", "/images/galleries/some-gallery/some-image8.jpg" %></li>
+            <li><%= link_to "9", "/images/galleries/some-gallery/some-image9.jpg" %></li>
+            <!-- Make number 10 match the image you put at the top. You can delete this comment. !-->
+            <li><%= link_to "10", "/images/galleries/some-gallery/some-image10.jpg" %></li>
+        </ul>
+    </article>
+</div>

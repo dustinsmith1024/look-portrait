@@ -3,7 +3,9 @@
 this loads all the css without the media queries
 
 */
+
+@import 'normalize';
 @import 'basic';
 @import 'small-and-up';
-//@import 'medium-only';
+/* Dont need medium in this one */
 @import 'large-and-up';

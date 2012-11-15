@@ -5,16 +5,14 @@
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
-    <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="description" content="Look Portrait, Omaha, Senior Pictures, Senior Pics, High School Senior Pictures, Photography">
-    <!-- Use title if it's in the page YAML frontmatter -->
+    <meta name="description" content="Look Portrait is an Omaha based photography company specializing in senior portraits.">
     <title><%= data.page.title || "Look Portrait" %></title>
     <%= javascript_include_tag  "all" %>
-    <!--[if lte IE 8]><%= stylesheet_link_tag "normalize", "ie" %><![endif]-->
-    <!--[if gt IE 8]><%= stylesheet_link_tag "normalize", "all" %><![endif]-->
-    <!--[if !IE]>--><%= stylesheet_link_tag "normalize", "all" %><!--<![endif]-->
+    <!--[if lte IE 8]><%= stylesheet_link_tag "ie" %><![endif]-->
+    <!--[if gt IE 8]><%= stylesheet_link_tag "all" %><![endif]-->
+    <!--[if !IE]>--><%= stylesheet_link_tag "all" %><!--<![endif]-->
   </head>
   
   <body class="<%= page_classes %>">
@@ -31,9 +29,9 @@
         </div>
         <nav>
             <ul>
-                <li><a <% if data.page.title == 'Look Portrait - Galleries' %>class="active"<% end %> href="index.html">Galleries</a></li>
-                <li><a <% if data.page.title == 'Look Portrait - About' %>class="active"<% end %> href="about.html">About</a></li>
-                <li><a <% if data.page.title == 'Look Portrait - Resources' %>class="active"<% end %> href="resources.html">Resources</a></li>
+                <li><a <% if data.page.title == 'Look Portrait - Galleries' %>class="active"<% end %> href="/index.html">Galleries</a></li>
+                <li><a <% if data.page.title == 'Look Portrait - About' %>class="active"<% end %> href="/about.html">About</a></li>
+                <li><a <% if data.page.title == 'Look Portrait - Resources' %>class="active"<% end %> href="/resources.html">Resources</a></li>
                 <li><a href="http://danbrouillette.typepad.com" target="_blank">Blog</a></li>
             </ul>
       </nav>
