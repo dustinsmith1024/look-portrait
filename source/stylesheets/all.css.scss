@@ -6,10 +6,6 @@
   @import 'small-and-up';
 }
 
-@media only screen and (min-width: 347px) and (orientation: landscape) {
-  @import 'medium-only';
-}
-
 @media only screen and (min-width: 347px) and (max-width: 635px) {
   @import 'medium-only';
 }
