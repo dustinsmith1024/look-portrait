@@ -1,7 +1,8 @@
 /* large and up */
 
 body {
-	width: 960px;
+	max-width: 960px;
+	padding: 0 10px;
 }
 .main aside img {
     max-width: 100%;
@@ -12,23 +13,17 @@ body {
     .galleries-link-container {
         @include span-columns(4);
         @include nth-omega(3n);
-        height: 240px;  /* Could be played with I think 250 for the */
-        overflow-y: hidden;
+        padding-bottom: 10px;
         .gallery-image-link {
-            @include fill-parent;
-            height: 200px;
-            display: block;
-            overflow-x: hidden;
             img {
-                height: 100%;
-                min-width: 100%;
+            	width: auto;
             }
         }
     }
 }
 
 .gallery-aside {
-      @include span-columns(3);
+      @include span-columns(2);
 }
 
 .active-picture-container {
@@ -37,9 +32,9 @@ body {
 
 }
 .gallery-section {
-      @include span-columns(9);
+      @include span-columns(10);
       img {
-      	height: 500px;
+      	max-height: 600px;
       	overflow-x: hidden;
       }
 }

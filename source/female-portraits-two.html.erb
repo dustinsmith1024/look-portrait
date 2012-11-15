@@ -2,9 +2,13 @@
 title: Look Portrait - Female Portraits Two
 ---
 <div class="main">
-    <aside class='gallery-aside-large'>
-        <p><%= lorem.paragraph %></p>
-        <p><%= lorem.paragraph %></p>
+    <aside class='gallery-aside'>
+        <p class="top"><%= lorem.paragraph %></p>
+    </aside>
+    <article class="gallery-section">
+        <div id="active-picture" class="active-picture-container">
+            <%= image_tag '/images/galleries/girls-portraits/girl-portraits-playing-with-hair.jpg', :alt=>'Girl in alley', :class=>'pictures' %>
+        </div>
         <ul id="pictures-list" class="pictures-list">
             <li><%= link_to "1", "/images/galleries/girls-portraits/girl-portraits-red-background.jpg" %></li>
             <li><%= link_to "2", "/images/galleries/girls-portraits/girl-portraits-sitting-by-garbage.jpg" %></li>
@@ -17,10 +21,5 @@ title: Look Portrait - Female Portraits Two
             <li><%= link_to "9", "/images/galleries/girls-portraits/girl-portraits-walking-up-steps.jpg" %></li>
             <li><%= link_to "10", "/images/galleries/girls-portraits/girl-portraits-playing-with-hair.jpg" %></li>
         </ul>
-    </aside>
-    <article class="gallery-section-small">
-        <div id="active-picture" class="active-picture-container">
-            <%= image_tag '/images/galleries/girls-portraits/girl-portraits-playing-with-hair.jpg', :alt=>'Girl in alley', :class=>'pictures' %>
-        </div>
     </article>
 </div> <!-- #main -->
