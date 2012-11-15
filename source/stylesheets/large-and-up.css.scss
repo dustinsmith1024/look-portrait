@@ -31,9 +31,29 @@ body {
       @include span-columns(3);
 }
 
+.active-picture-container {
+	overflow-x: hidden; //straight crops off the right side of the image if its too big
+	text-align: left;
+
+}
 .gallery-section {
       @include span-columns(9);
+      img {
+      	height: 500px;
+      	overflow-x: hidden;
+      }
+}
 
+.gallery-aside-large {
+      @include span-columns(7);
+      float: right;
+}
+
+.gallery-section-small {
+      @include span-columns(5);
+      img {
+      	height: 550px;
+  	}
 }
 
 .about-aside {
@@ -53,3 +73,5 @@ body {
 .resources-article {
       @include span-columns(6);
 }
+
+

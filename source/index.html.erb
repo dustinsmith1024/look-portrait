@@ -3,50 +3,51 @@ title: Look Portrait - Galleries
 ---
 <div class="main">
     <div class="galleries-link-container">
-        <% link_to 'gallery.html', :class=>'gallery-image-link' do %>
-            <%= image_tag 'home-girl-black-white.png', :alt=>'Senior picture of girl' %>
+        <% link_to 'female-portraits.html', :class=>'gallery-image-link' do %>
+        	<%= image_tag '/images/galleries/girls-portraits/girls-portraits-thumb.jpg', :alt=>'Female portraits' %>
+			<div class="gallery-link-logo"></div>
+			<%#= image_tag 'look-logo.png', :class=>'logo-hover', :alt=>'Look Portrait' %>
+        <% end %>
+        <%= link_to 'Female Portraits', 'galleries/female-portraits.html', :class=>'gallery-link' %>
+    </div>
+    <div class="galleries-link-container">
+        <% link_to 'female-portraits-two.html', :class=>'gallery-image-link' do %>
+            <%= image_tag '/images/galleries/girls-portraits/girls-portraits-two-thumb.jpg', :alt=>'Female portraits' %>
             <div class="gallery-link-logo"></div>
-            <%#= image_tag 'look-logo.svg', :class=>'logo-hover', :alt=>'Look Portrait' %>
+            <%#= image_tag 'look-logo.png', :class=>'logo-hover', :alt=>'Look Portrait' %>
         <% end %>
-        <%= link_to 'Senior Pics - Hillary Roe', 'galleries/seniors.html', :class=>'gallery-link' %>
+        <%= link_to 'Female Portraits - Two', 'galleries/female-portraits.html', :class=>'gallery-link' %>
     </div>
     <div class="galleries-link-container">
-        <% link_to 'gallery.html', :class=>'gallery-image-link' do %>
-        	<%= image_tag 'home-golf.png', :alt=>'Senior picture of golfer' %>
+        <% link_to 'female-landscapes.html', :class=>'gallery-image-link' do %>
+            <%= image_tag '/images/galleries/girls/female-landscapes-thumb.jpg', :alt=>'Female portraits' %>
+            <div class="gallery-link-logo"></div>
+            <%#= image_tag 'look-logo.png', :class=>'logo-hover', :alt=>'Look Portrait' %>
+        <% end %>
+        <%= link_to 'Female Landscapes', 'galleries/female-landscapes.html', :class=>'gallery-link' %>
+    </div>
+    <div class="galleries-link-container">
+        <% link_to 'male-portraits.html', :class=>'gallery-image-link' do %>
+        	<%= image_tag '/images/galleries/guys-portraits/guy-portraits-thumb.jpg', :alt=> 'Senior picture of hockey player' %>
 			<div class="gallery-link-logo"></div>
 			<%#= image_tag 'look-logo.png', :class=>'logo-hover', :alt=>'Look Portrait' %>
         <% end %>
-        <%= link_to 'Senior Pics - Mike Dunn', 'galleries/seniors.html', :class=>'gallery-link' %>
+        <%= link_to 'Male Portraits', 'galleries/guys-portraits.html', :class=>'gallery-link' %>
     </div>
     <div class="galleries-link-container">
-        <% link_to 'gallery.html', :class=>'gallery-image-link' do %>
-        	<%= image_tag 'golf.jpeg', :alt=>'Senior picture of golfer' %>                    <div class="gallery-link-logo"></div>
-        	<%#= image_tag 'look-logo.png', :class=>'logo-hover', :alt=>'Look Portrait' %>
-        <% end %>
-        <%= link_to 'Senior Pics - Jason Dunn', 'galleries/seniors.html', :class=>'gallery-link' %>
-    </div>
-    <div class="galleries-link-container">
-        <% link_to 'gallery.html', :class=>'gallery-image-link' do %>
-        	<%= image_tag 'hockey.jpeg', :alt=> 'Senior picture of hockey player' %>
-			<div class="gallery-link-logo"></div>
-			<%#= image_tag 'look-logo.png', :class=>'logo-hover', :alt=>'Look Portrait' %>
-        <% end %>
-        <%= link_to 'Senior Pics - Dustin Baker', 'galleries/seniors.html', :class=>'gallery-link' %>
-    </div>
-    <div class="galleries-link-container">
-        <% link_to 'gallery.html', :class=>'gallery-image-link' do %>
-        	<%= image_tag 'girl4.jpeg', :alt=> 'Senior picture of girl' %>
+        <% link_to 'male-landscapes.html', :class=>'gallery-image-link' do %>
+        	<%= image_tag '/images/galleries/guys/guy-landscape-thumb-300x200.jpg', :alt=> 'Senior picture of girl' %>
         	<div class="gallery-link-logo"></div>
         	<%#= image_tag 'look-logo.svg', :class=>'logo-hover', :alt=>'Look Portrait' %>
         <% end %>
-        <%= link_to 'Senior Pics - Julian Hodge', 'galleries/seniors.html', :class=>'gallery-link' %>
+        <%= link_to 'Male Landscapes', 'male-landscapes.html', :class=>'gallery-link' %>
     </div>
     <div class="galleries-link-container">
-        <% link_to 'gallery.html', :class=>'gallery-image-link' do %>
-        	<%= image_tag 'golf.jpeg', :alt=>'Senior picture of golfer' %>
+        <% link_to 'athletics.html', :class=>'gallery-image-link' do %>
+        	<%= image_tag '/images/galleries/athletics/athletics-thumb.jpg', :alt=>'Senior picture of golfer' %>
         	<div class="gallery-link-logo"></div>
         	<%#= image_tag 'look-logo.png', :class=>'logo-hover', :alt=>'Look Portrait' %>
         <% end %>
-        <%= link_to 'Senior Pics - Cassidy Chip', 'galleries/seniors.html', :class=>'gallery-link' %>
+        <%= link_to 'Athletics', 'athletics.html', :class=>'gallery-link' %>
     </div>
 </div> <!-- #main -->

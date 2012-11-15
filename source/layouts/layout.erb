@@ -13,6 +13,7 @@
     <title><%= data.page.title || "Look Portrait" %></title>
     <%= javascript_include_tag  "all" %>
     <!--[if lte IE 8]><%= stylesheet_link_tag "normalize", "ie" %><![endif]-->
+    <!--[if gt IE 8]><%= stylesheet_link_tag "normalize", "all" %><![endif]-->
     <!--[if !IE]>--><%= stylesheet_link_tag "normalize", "all" %><!--<![endif]-->
   </head>
   
