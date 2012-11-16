@@ -7,12 +7,15 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="description" content="Look Portrait is an Omaha based photography company specializing in senior portraits.">
+    <meta name="description" content="Look Portrait Photography - Omaha, NE - Senior Pictures, Wedding photography, and commercial photography.">
     <title><%= data.page.title || "Look Portrait" %></title>
-    <%= javascript_include_tag  "all" %>
-    <!--[if lte IE 8]><%= stylesheet_link_tag "ie" %><![endif]-->
+    <!--[if lte IE 8]>
+      <%= stylesheet_link_tag "ie" %>
+      <%= javascript_include_tag  "vendor/selectivizr-min" %>
+    <![endif]-->
     <!--[if gt IE 8]><%= stylesheet_link_tag "all" %><![endif]-->
     <!--[if !IE]>--><%= stylesheet_link_tag "all" %><!--<![endif]-->
+    <%= javascript_include_tag  "vendor/modernizr-2.6.1-respond-1.1.0.min" %>
   </head>
   
   <body class="<%= page_classes %>">
@@ -49,11 +52,18 @@
         <p><%= mail_to 'info@lookportrait.com' %></p>
     </footer>
 
-    <script>
-        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/javascripts/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+    <%= javascript_include_tag  "all" %>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36383696-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
     </script>
   </body>
 </html>

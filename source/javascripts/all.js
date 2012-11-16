@@ -1,4 +1,3 @@
-//= require_tree .
 $(function(){
 	if (Modernizr.inlinesvg) {
         // Swap in SVG's for better zooming and pixelness on retina displays
