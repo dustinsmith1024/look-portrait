@@ -36,7 +36,7 @@ $(function(){
 		// Just a helper to clean up duplicate code of swapping in the pictures
 		// Dont use AJAX for loading in pictures just append the element
 		// This could possibly fail if image doesnt exist
-		var $img = $("<img />").attr('src', src).fadeIn();
+		var $img = $("<img />").attr('src', src).removeAttr('height').fadeIn();
 		$(container).html($img);
 	}
 });
