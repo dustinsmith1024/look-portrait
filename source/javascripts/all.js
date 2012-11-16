@@ -33,9 +33,9 @@ $(function(){
 	});
 
 	function swapPicture(container, src) {
-		//Just a helper to clean up duplicate code of swapping in the pictures
-		//Dont use AJAX for loading in pictures just append the element
-		//TODO: There is an ERROR case here if the link it wrong this could bomb out...
+		// Just a helper to clean up duplicate code of swapping in the pictures
+		// Dont use AJAX for loading in pictures just append the element
+		// This could possibly fail if image doesnt exist
 		var $img = $("<img />").attr('src', src).fadeIn();
 		$(container).html($img);
 	}
